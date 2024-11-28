@@ -1,11 +1,13 @@
 #include <iostream>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
+#include <cmath>
 
 using namespace std;
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow* window);
+void updateBackgroundColor(float time);
 
 int run_hello_window()
 {
@@ -40,15 +42,13 @@ int run_hello_window()
 	// -----------
 	while (!glfwWindowShouldClose(window))
 	{
-
 		// input
 		// -----
 		processInput(window);
 
 		// render
 		// ------
-		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-		glClear(GL_COLOR_BUFFER_BIT);
+		updateBackgroundColor((float)glfwGetTime());
 
 		// glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
 		// -------------------------------------------------------------------------------
@@ -76,4 +76,17 @@ void processInput(GLFWwindow* window)
 {
 	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
 		glfwSetWindowShouldClose(window, true);
+}
+
+void updateBackgroundColor(float time)
+{
+	
+	// Calculate color values based on time
+	float red = (std::sin(time * 0.5f) + 1.0f) / 2.0f; 
+	float green = (std::sin(time * 0.3f) + 1.0f) / 2.0f;  
+	float blue = (std::sin(time * 0.7f) + 1.0f) / 2.0f;   
+
+	// Set the background color
+	glClearColor(red, green, blue, 1.0f); // Fully opaque
+	glClear(GL_COLOR_BUFFER_BIT);
 }
