@@ -135,7 +135,7 @@ int hello_triangle()
 		// render
 		// ------
 
-		// back ground
+		// background
 		updateBackgroundColor((float)glfwGetTime());
 
 		// triangle

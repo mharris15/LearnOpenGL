@@ -142,10 +142,10 @@ int hello_square()
 		// render
 		// ------
 
-		// back ground
+		// background
 		updateBackgroundColor((float)glfwGetTime());
 
-		// triangle
+		// square
 		glUseProgram(shaderProgram);
 		glBindVertexArray(VAO);
 		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
