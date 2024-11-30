@@ -19,6 +19,9 @@
     <Filter Include="Source Files\1.getting_started\hello_window">
       <UniqueIdentifier>{43e6b070-65f1-4fe0-8ab0-fce08158de54}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\1.getting_started\hello_triangle">
+      <UniqueIdentifier>{261e6333-f451-477f-8204-b5a8c94bfdfc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LearnOpenGL.cpp">
@@ -27,5 +30,16 @@
     <ClCompile Include="hello_window.cpp">
       <Filter>Source Files\1.getting_started\hello_window</Filter>
     </ClCompile>
+    <ClCompile Include="hello_triangle.cpp">
+      <Filter>Source Files\1.getting_started\hello_triangle</Filter>
+    </ClCompile>
+    <ClCompile Include="hello_square.cpp">
+      <Filter>Source Files\1.getting_started\hello_triangle</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="notes.txt">
+      <Filter>Source Files\1.getting_started</Filter>
+    </Text>
   </ItemGroup>
 </Project>

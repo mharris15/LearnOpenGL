@@ -1,0 +1,16 @@
+The processing cores run small programs on the GPU for each step of the
+pipeline. These small programs are called shaders.
+
+Shaders are written in the OpenGL Shading Language (GLSL).
+
+A fragment in OpenGL is all the data required for OpenGL to render a single pixel.
+
+The main purpose of the fragment shader is to calculate the final color of a pixel and this is
+usually the stage where all the advanced OpenGL effects occur.
+Usually the fragment shader contains
+data about the 3D scene that it can use to calculate the final pixel color (like lights, shadows, color
+of the light and so on).
+
+VBO: vertex buffer object
+VAO: vertex array object
+EBO: element buffer objects

@@ -1,6 +1,8 @@
-int run_hello_window();
+int hello_window();
+int hello_triangle();
+int hello_square();
 
 int main()
 {
-    return run_hello_window();
+    return hello_square();
 }

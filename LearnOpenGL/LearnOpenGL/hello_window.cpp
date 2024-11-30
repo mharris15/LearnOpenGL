@@ -9,7 +9,7 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow* window);
 void updateBackgroundColor(float time);
 
-int run_hello_window()
+int hello_window()
 {
 	// glfw: initialize and configure
 	// ------------------------------
